@@ -3,12 +3,18 @@ import './App.css';
 import axios from 'axios';
 import Players from './components/Players';
 import Navbar from './components/Navbar';
-class App extends React.Component() {
- 
- 
-   state = {
+
+
+
+class App extends React.Component{
+ constructor(){
+   super();
+      this.state = {
       players: []
     };
+ }
+ 
+
 
     componentDidMount(){
       axios.get('http://localhost:5000/api/players')
